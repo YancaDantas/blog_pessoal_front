@@ -1,31 +1,37 @@
-import React from "react";
-import "./Navbar.css";
+import { Link } from 'react-router-dom';
+import React from 'react';
+
 function Navbar() {
   return (
-    <div>
-      <div className="flex py-4 mx-auto space-x-4 color-navbar items-center justify-between border-b-orange-500 border-b-2">
-
-        <div className="justify-center mx-2 py-2">
-          <ul className="flex space-x-20 text-center color-icones items-end text-2xl">
-            <button type="submit" className="hover:text-white"><li>Menu</li></button>
-            <button type="submit" className="hover:text-white"><li >Postagens</li></button>
-            <button type="submit" className="hover:text-white"><li>Feed</li></button>
-            <button type="submit" className="hover:text-white"><li >Sobre</li></button>
-          </ul>
+    <div className='w-full bg-red-900 text-white flex justify-center py-4'>
+      <div className="container flex justify-between text-lg items-center">
+        <div className='text-2xl font-bold uppercase'>
+          <Link to="/" className="hover:underline">Blog Pessoal</Link>
         </div>
-        
 
-        <div className="flex ">
-          <input type="text" placeholder="Pesquisar..." className="color-pesquisar text-white mx-10 px-8 rounded-full"/>
+        <div className='flex gap-4 items-center'>
+          <Link to="/postagens" className='hover:underline'>Postagens</Link>
+          <Link to="/temas" className='hover:underline'>Temas</Link>
+          <Link to="/cadastrar-tema" className='hover:underline'>Cadastrar tema</Link>
+          <Link to="/perfil" className='hover:underline'>Perfil</Link>
+          <Link to="/sair" className='hover:underline'>Sair</Link>
+
+          <div className="flex flex-grow justify-end">
+            <input
+              type="text"
+              placeholder="Pesquisar..."
+              className="text-black bg-white px-4 py-2 rounded-full"
+            />
+          </div>
         </div>
-        
-
       </div>
-
     </div>
-
-    
   );
 }
 
 export default Navbar;
+
+
+        
+  
+
