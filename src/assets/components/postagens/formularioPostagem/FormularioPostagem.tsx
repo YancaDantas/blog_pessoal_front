@@ -2,7 +2,7 @@ import React, { ChangeEvent, useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { AuthContext } from '../../../../contexts/AuthContext'
 import Tema from '../../../../models/Tema'
-import { atualizar, buscar, cadastrar, deletar } from '../../../../services/Service'
+import { atualizar, buscar, cadastrar } from '../../../../services/Service'
 import { toastAlerta } from '../../../../util/toastAlerta'
 import Postagem from '../../../../models/Postagem'
 
